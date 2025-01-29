@@ -11,7 +11,7 @@ class Profile {
 
 // !trabajaré con __construct para definir la clase.
 public function __construct(string $name, int $age, string $language) {
-    //!asignamos el valor a los diferentes parametros (name, age y languaje)
+    //!asignamos el valor a los diferentes parametros con el parametro this (name, age y languaje)
   $this -> name = $name;
   $this -> age = $age;
   $this -> language = $language;
