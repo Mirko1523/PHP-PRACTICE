@@ -1,5 +1,5 @@
 <?php  
-
+// Este archivo esta encargado de la creacion y organizacion de los perfiles.
 //! definimos el strict types para verificar que los datos que pongamos osn los correctos
 declare(strict_types=1);
 

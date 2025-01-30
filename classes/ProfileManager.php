@@ -34,7 +34,9 @@ class ProfileManager{
     public function getProfiles(): array {
         $profiles = [];
         if (file_exists($this->privateFile)) {
+            //FILE_IGNORE_NEW_LINES elimina los saltos de linea al final.
             $lines = file($this->privateFile, FILE_IGNORE_NEW_LINES);
+            //el foreach va a iterar por cada perfil
             foreach ($lines as $line) {
                 // Dividir los datos por el separador " | "
                 [$name, $age, $language] = $this->parseProfileLine($line);
