@@ -4,7 +4,7 @@
 declare(strict_types=1);
 //! importamos profile.php y profilemanager.php
 require_once 'classes/Profile.php';
-require_once 'classes/ProfileManager.php';
+require_once 'classes/Profile_Manager.php';
 
 //! importo el archivo de datos generado automaticamente
 //funciona como una BD simple(creando un archivo)
