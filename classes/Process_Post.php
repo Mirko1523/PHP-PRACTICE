@@ -6,7 +6,6 @@ declare(strict_types=1);
 require_once 'classes/Profile.php';
 require_once 'classes/Profile_Manager.php';
 
-//! importo el archivo de datos generado automaticamente
 //funciona como una BD simple(creando un archivo)
 $dataFile = 'data/perfiles.txt';
 
