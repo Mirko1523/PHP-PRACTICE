@@ -5,6 +5,10 @@ declare(strict_types=1);
 //! importamos profile.php y profilemanager.php
 require_once 'classes/Profile.php';
 require_once 'classes/Profile_Manager.php';
+//!IMPORTAMOS LAS VALIDACIONES
+require_once 'verifications/verifications.php';
+
+
 
 //funciona como una BD simple(creando un archivo)
 $dataFile = 'data/perfiles.txt';
@@ -24,6 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $age = (int)$_POST['age'];
     $language = htmlspecialchars($_POST['language']);
 
+//! valido los datos antes de guardar
+$validator = new validationPerfil($name, $age);
+$result_validation = $validator ->incorrectVerif();
+
+//si los datos no pasan la verificacion saldra un mensaje de verifications:
+   if ($result_validation !== "Validación exitosa."){
+    echo "<p style='color:red;'><strong>$result_validation</strong></p>";
+   }else{
+
+
     //! Se crea y guarda el perfil generado
     $profile = new Profile($name, $age, $language);
     //guardamos el perfil del usuario en perfiles.txt
@@ -34,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //! Con este header evitamos el reenvio del formulario (al apretar f5 se volvia a crear el usuario)
     header("Location: index.php");
     exit;
+    }
 }
 
 //! con getProfiles obtenemos todos los perfiles guardados de la lista
