@@ -8,8 +8,6 @@ require_once 'classes/Profile_Manager.php';
 //!IMPORTAMOS LAS VALIDACIONES
 require_once 'verifications/verifications.php';
 
-
-
 //funciona como una BD simple(creando un archivo)
 $dataFile = 'data/perfiles.txt';
 
@@ -44,7 +42,7 @@ $result_validation = $validator ->incorrectVerif();
     $profileManager->saveProfile($profile);
 
     //eco renderiza este mensaje una vez se crea el usuario o perfil.
-    echo "<p><strong>Perfil guardado correctamente.</strong></p>";
+    // echo "<p><strong>Perfil guardado correctamente.</strong></p>";
     //! Con este header evitamos el reenvio del formulario (al apretar f5 se volvia a crear el usuario)
     header("Location: index.php");
     exit;

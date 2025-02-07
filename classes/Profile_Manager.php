@@ -1,5 +1,4 @@
 <?php
-
 //! declaro strict_types para verificar que pongo todos los datos correctos
 declare(strict_types=1);
 
@@ -11,7 +10,7 @@ class ProfileManager{
 
     //!declaro la propiedad privada que será la ruta del archivo donde se van a guardar los perfiles. Al ser privada solo se puede
     //! entrar a ella dentro de la clase.
-    private string $privateFile;
+    public string $privateFile;
 
     //! Creo y defino la función constructora de la clase ProfileManager.
     public function __construct(string $privateFile){

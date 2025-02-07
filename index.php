@@ -1,6 +1,5 @@
-<!-- Importo el archivo donde se procesa la creación del usuario -->
 <?php require_once 'classes/Process_Post.php'; ?>
-
+<!-- Importo el archivo donde se procesa la creación del usuario -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

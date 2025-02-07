@@ -6,7 +6,7 @@ public int $age;
 public function __construct(string $name, int $age)
 {
   $this ->name = trim($name);
-  $this ->age = trim($age);   
+  $this ->age = $age;   
 }
 
 public function incorrectVerif(): string {
@@ -15,11 +15,11 @@ public function incorrectVerif(): string {
           return "Error: El nombre debe comenzar con mayúscula y solo contener letras.";
     }
 
-if ($this->age <= 0){
-    return "Error: la edad debe ser un numero positivo";
-}
+    if (!filter_var($this->age, FILTER_VALIDATE_INT) || $this->age <= 0 || !ctype_digit((string) $this->age)) {
+      return "Error: La edad debe ser un número entero positivo.";
+  }
 
+  return "Validación exitosa.";
 }
-
 }
 ?>

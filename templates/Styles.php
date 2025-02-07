@@ -11,9 +11,11 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;       
+  justify-content: center;   
+  min-height: 100vh;         
+  text-align: center;        
 }
-
 
 .container {
   width: 90%;
@@ -22,7 +24,7 @@ body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
+  margin: 1rem auto;
 }
 
 
@@ -33,11 +35,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
-
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1em;
 }
 
 label {
@@ -80,6 +81,7 @@ h2 {
   font-size: 1.5rem;
   color: #333;
 }
+
 
 .profile {
   background: white;

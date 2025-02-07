@@ -1,8 +1,6 @@
-<!-- CODIGO ENCARGADO DE MOSTRAR LOS PERFILES -->
- 
-<!-- empty: comprueba de que la variable $profiles no esta vacia -->
 <?php if (!empty($profiles)): ?>
-
+<!-- CODIGO ENCARGADO DE MOSTRAR LOS PERFILES -->
+<!-- empty: comprueba de que la variable $profiles no esta vacia -->
   <h2>Perfiles creados:</h2>
 <!-- Se hace un metodo foreach que reccore cada objeto(perfiles) del array $profiles -->
   <?php foreach ($profiles as $profile): ?>
