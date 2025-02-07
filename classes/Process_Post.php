@@ -47,6 +47,7 @@ $result_validation = $validator ->incorrectVerif();
     header("Location: index.php");
     exit;
     }
+ 
 }
 
 //! con getProfiles obtenemos todos los perfiles guardados de la lista

@@ -15,8 +15,8 @@ public function incorrectVerif(): string {
           return "Error: El nombre debe comenzar con mayúscula y solo contener letras.";
     }
 
-    if (!filter_var($this->age, FILTER_VALIDATE_INT) || $this->age <= 0 || !ctype_digit((string) $this->age)) {
-      return "Error: La edad debe ser un número entero positivo.";
+    if ($this->age <= 0) {
+      return "Error: La edad debe ser un número positivo.";
   }
 
   return "Validación exitosa.";
