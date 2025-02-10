@@ -5,7 +5,7 @@ declare(strict_types=1);
 //! importamos profile.php y profilemanager.php
 require_once 'classes/Profile.php';
 require_once 'classes/Profile_Manager.php';
-//!IMPORTAMOS LAS VALIDACIONES
+//!IMPORTAMOS LAS VALIDACIONES desde el archivo verifications.php
 require_once 'verifications/verifications.php';
 
 //funciona como una BD simple(creando un archivo)
@@ -30,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $validator = new validationPerfil($name, $age);
 $result_validation = $validator ->incorrectVerif();
 
-//si los datos no pasan la verificacion saldra un mensaje de verifications:
+//si los datos no pasan la verificacion saldra un mensaje de verifications dando a entender que el formulario, esta mal
+// respondido, dando asi una alerta.
    if ($result_validation !== "Validación exitosa."){
     echo "<p style='color:red;'><strong>$result_validation</strong></p>";
    }else{
-
-
+//Si todo sale bien se creara y se guardara todo el perfil nuevo recien creado
     //! Se crea y guarda el perfil generado
     $profile = new Profile($name, $age, $language);
     //guardamos el perfil del usuario en perfiles.txt

@@ -6,21 +6,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="templates/Styles.php">
-  <title>Proyecto de generador de Perfiles</title>
+  <title>Proyecto PHP</title>
 </head>
 
 <body>
-  <h1>Generador de Perfiles</h1>
+  <h1>Generador de Perfiles!</h1>
 
   <!-- Formulario de creación -->
   <form action="index.php" method="POST">
-    <label for="name">Nombre y Apellido:</label>
+    <label for="name">Tu Nombre:</label>
     <input type="text" id="name" name="name" required>
 
-    <label for="age">Edad:</label>
+    <label for="age">Tu Edad:</label>
     <input type="number" id="age" name="age" required>
 
-    <label for="language">Lenguaje favorito:</label>
+    <label for="language">Tu Lenguaje favorito:</label>
     <select id="language" name="language" required>
       <option value="PHP">PHP</option>
       <option value="JavaScript">JavaScript</option>
@@ -29,7 +29,7 @@
       <option value="C#">C#</option>
       <option value="Rust">Rust</option>
     </select>
-    <button type="submit">Crear Perfil</button>
+    <button type="submit">Crear </button>
   </form>
 
   <!-- Ahora cargamos la lista de perfiles -->

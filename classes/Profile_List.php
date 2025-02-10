@@ -10,5 +10,5 @@
     <div class="profile"><?= htmlspecialchars($profile->textUser()) ?></div>
   <?php endforeach; ?>
 <?php else: ?>
-  <p>No hay perfiles creados aún.</p>
+  <p>No hay perfiles creados aún. Creá uno :)</p>
 <?php endif; ?>
